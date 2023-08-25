@@ -16,3 +16,5 @@ For example:
   "Player2":{"locX":475,"locY":424}
 }
 ```
+
+When adding this in YoDeck, the player location will not change so it's recommended to set this as a Static App.
