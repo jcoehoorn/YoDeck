@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="./YD_API.js" />
+
+<script>
+// TODO: get this via config
+/*
+var pin_locations = {
+ "hulitt":{"locX":476,"locY":566},
+ "arc":{"locX":673,"locY":500},
+ "campbell":{"locX":709,"locY":314},
+ "bpac_lobby":{"locX":558,"locY":315},
+ "mackey_hall":{"locX":725,"locY":573},
+ "mackey_caf":{"locX":673,"locY":573},
+ "mcgehee":{"locX":522,"locY":508},
+ "middlebrook":{"locX":479,"locY":419}
+};
+*/
+
+function alt(msg)
+{
+	var w = 200;
+	var h = 150;
+	
+	var p = document.createElement("p");
+	
+	p.width = w + "px";
+	p.height = h + "px";
+	p.style.border = "2px solid black";
+	p.style.position = "absolute";
+	p.style.width = w + "px";
+	p.style.height= h + "px";
+	p.style.display = "block";
+	p.style.top = ( (1080/2) - (h/2)) + "px";
+	p.style.left = ( (1920/2) - (w/2)) + "px";
+	p.innerHTML = msg;
+	
+	var body = document.body;
+	body.appendChild(p);
+}
+
+
+
+function init_widget(config) {
+    // check if config contains a pin_list and assign to pin_locations
+	alert("called");
+	
+	var pin_width = 40;
+	var pin_height = 72;
+	
+	var token = config.player_params['auth_token'];
+	var pin_locations = config.pin_list;
+	
+	if (pin_locations) {
+	    var name = getPlayerName();
+		var player = pin_locations[name];
+		if (player)
+		{
+			// add a pin at this location
+			var img = document.createElement("img");
+			img.src = "./pin.png";
+			img.width = pin_width + "px";
+			img.height = pin_height + "px";
+			img.border = 0;
+			img.style.position = "absolute";
+			img.style.width = pin_width + "px";
+			img.style.height= pin_height + "px";
+			img.style.top = (player.locY-pin_height) + "px";
+			img.style.left = (player.locX-(pin_width/2)) + "px";
+			
+			var body = document.body;
+			body.appendChild(img);
+		}
+	}
+}
+</script>
+
+<style>
+	body {
+		width:1920px;
+		height:1080px;
+		border:0;
+		margin:0;
+		padding:0;
+		background-image: url("./map.png")
+	}
+</style>
+</head>
+<body width="1920px" height="1080px" id="body">
+</body>
+</html>

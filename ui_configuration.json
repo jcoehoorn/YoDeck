@@ -1,0 +1,42 @@
+{
+  "fields": [
+    "Width",
+    "Height",
+    "PinList"
+  ],
+  "schema": {
+    "Width": {
+      "editorAttrs": {
+        "max": 5000,
+        "min": 100,
+        "step": 10
+      },
+      "title": "Map Width in Pixels",
+      "type": "Number",
+      "validators": [
+        "required",
+        "number"
+      ]
+    },
+    "Height": {
+      "editorAttrs": {
+        "max": 5000,
+        "min": 100,
+        "step": 10
+      },
+      "title": "Map Height in Pixels",
+      "type": "Number",
+      "validators": [
+        "required",
+        "number"
+      ]
+    },
+    "PinList": {
+      "title": "Pin List JSON",
+      "type": "TextArea"
+	  "validators": [
+        "required"
+      ]
+	}
+  }
+}
