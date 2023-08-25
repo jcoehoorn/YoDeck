@@ -2,7 +2,7 @@
 
 Show a pin on a map in a YoDeck Layout based on the name of the current player.
 
-This app does not provide the map itself. Instead, layer this over top of the map image when adding to the Layer, and make sure to check the "Allow tranparency" option.
+This app does not provide the map itself. Instead, layer this over top of the map image when adding to the Layer, and make sure to check the "Allow transparency" option.
 
 In order for things to line up, the app needs to be configured with width and height of the region where the map will display, including the entire window if the map will fill the screen.
 
