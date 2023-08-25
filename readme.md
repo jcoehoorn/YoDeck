@@ -16,5 +16,6 @@ For example:
   "Player2":{"locX":475,"locY":424}
 }
 ```
+You can, of course, include other properties to make maintenance eaiser (say, location descriptions), but they will be ignored by the app. You may need trial and error to get the exact correct coordinate.
 
 When adding this in YoDeck, the player location will not change so it's recommended to set this as a Static App.
